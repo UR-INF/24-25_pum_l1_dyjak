@@ -14,6 +14,10 @@ import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.Marker;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -60,6 +64,21 @@ public class MainActivity extends AppCompatActivity {
                 showRandomJoke();
             }
         });
+
+
+
+        // Inicjalizacja MapView
+        MapView mapView = findViewById(R.id.mapView);
+        mapView.setMultiTouchControls(true);
+        mapView.getController().setZoom(15.0);
+        mapView.getController().setCenter(new GeoPoint(52.2297, 21.0122)); // Ustawienie na Warszawę
+
+        // Dodanie markera
+        Marker marker = new Marker(mapView);
+        marker.setPosition(new GeoPoint(52.2297, 21.0122));
+        marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
+        marker.setTitle("Warszawa");
+        mapView.getOverlays().add(marker);
     }
 
 

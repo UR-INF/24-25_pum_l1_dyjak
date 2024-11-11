@@ -11,6 +11,8 @@ composeBom = "2024.04.01"
 playServicesMaps = "19.0.0"
 appcompat = "1.7.0"
 playServicesLocation = "21.3.0"
+openstreetmapviewer = "6.1.11"
+osmdroidAndroid = "6.1.20"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,6 +32,8 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+openstreetmapviewer = { group = "org.osmdroid", name = "OpenStreetMapViewer", version.ref = "openstreetmapviewer" }
+osmdroid-android = { group = "org.osmdroid", name = "osmdroid-android", version.ref = "osmdroidAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

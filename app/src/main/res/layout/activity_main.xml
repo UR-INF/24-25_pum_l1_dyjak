@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:baselineAligned="true"
     android:orientation="vertical"
+    android:textAlignment="center"
     android:visibility="visible">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="108dp"
-        android:text="TITLE" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="TITLE" />
 
-    <com.google.android.gms.maps.MapView
+    <org.osmdroid.views.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="324dp" />
+        android:layout_height="340dp"
+        tools:ignore="MissingClass" />
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/generateJokeButton"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:src="@android:drawable/dialog_holo_dark_frame" />
 
-    <ImageButton
-        android:id="@+id/generateJokeButton"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:src="@android:drawable/dialog_holo_dark_frame" />
+        <TextView
+            android:id="@+id/textViewJoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
-    <TextView
-        android:id="@+id/textViewJoke"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
 </LinearLayout>
